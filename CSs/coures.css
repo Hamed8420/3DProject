@@ -1,0 +1,217 @@
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+    html{
+        scroll-behavior: smooth;
+    
+    
+    }
+    body{
+    min-height: 100vh;
+    background-color:#2e2e2e;
+    
+    
+    }
+    .courses{
+         width: 100%;
+         min-height: 100vh;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin-top: 10px;
+      
+         }
+    .courses .contentte{
+           position: relative;
+           text-align: center;
+           width: 100%;
+        
+        }
+    .courses .contentte .mxw200p{
+           max-width: 1000px;
+           margin: 0 auto;
+        
+        }
+        .courses .contentte .mxw200p h1{
+         font-size: 60px;
+         font-weight: 200;
+         margin-top: 10px;
+         margin-bottom: 30px;
+         color:rgb(255, 255, 0);
+         letter-spacing: 2px;
+         box-shadow: 15px 15px 20px rgb(0 0 0 / 50%), -15px -15px 20px #ffb;
+         
+      
+        }
+      
+        .courses .contentte  .mxw200p h3{ 
+         position: relative;
+         font-size: 40px;
+         font-weight: 300;
+         margin-top: 60px;
+         margin-bottom: 20px;
+         letter-spacing: 1px;
+         color:#ffb;
+        }
+       .courses .contentte .coursbx {
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
+        grid-template-rows: auto;
+        grid-gap: 0 20px;
+        
+    
+        
+        }
+
+      .courses .contentte .coursbx .box{
+        position: relative;
+        background: #2e2e2e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #2e2e2e;
+        margin: 20px 15px;
+
+      }
+      .courses .contentte .coursbx .box::before{
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        transform: skew(2deg,2deg);
+        z-index: -1;
+
+      }
+      .courses .contentte .coursbx .box:nth-child(1)::before{
+         background: linear-gradient(315deg,#ffc107,#ffc107)
+      }
+      .courses .contentte .coursbx .box:nth-child(2)::before{
+        background: linear-gradient(315deg,#ffc107,#ffc107)
+     }
+     .courses .contentte .coursbx .box:nth-child(3)::before{
+      background: linear-gradient(315deg,#ffc107,#ffc107)
+   }
+   .courses .contentte .coursbx .box:nth-child(4)::before{
+    background: linear-gradient(315deg,#ffc107,#ffc107)
+ }
+ .courses .contentte .coursbx .box:nth-child(5)::before{
+  background: linear-gradient(315deg,#ffc107,#ffc107)
+}
+
+
+      
+
+       .courses .contentte .coursbx  .brend{
+         position: relative;
+         padding: 20px;
+         transform: translateY(40px);
+
+     
+             
+        }
+      
+       .courses .contentte .coursbx .box .brend img{
+          width: 200px;
+          height: 200px;
+
+        }
+       .courses .contentte .coursbx .box .brend h2{
+          margin: 10px 0 10px ;
+           color: yellow;
+           font-size: 24px;
+           letter-spacing: 2px;
+           font-weight: 500;
+           transform: translateY(-40px);
+           opacity: 0;
+           visibility: hidden;
+           }
+
+           .courses .contentte .coursbx .box:hover .brend h2{
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+  
+          }
+        .courses .contentte .coursbx .box .brend a{
+          text-decoration: none;
+          position: relative;
+          margin: 20px 0 0;
+          padding: 10px 20px;
+          border: 1px solid #2e2e2e;
+          display: inline-block;
+          color: #2e2e2e;
+          transition: 0.5s;
+          transform: translateY(-40px);
+          opacity: 0;
+          visibility: hidden;
+          background:  #2e2e2e;;
+
+         
+        }
+        .courses .contentte .coursbx .box:hover .brend a{
+          transform: translateY(0);
+          opacity: 1;
+          visibility: visible;
+         
+
+        }
+        .courses .contentte .coursbx .box .brend a::before{
+          content: '';
+          position: absolute;
+          top: -2px;
+          left: -2px;
+          right: -2px;
+          bottom: -2px;
+          background:  #fff;
+          transform: skew(2deg,2deg);
+          z-index: -1;
+          border:5px solid #ffc107;
+  
+        }
+        
+        .courses .contentte .coursbx .box .brend a:hover{
+          color: #000;
+          background: #ffc107;
+    
+        }
+
+
+        .btn{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-wrap: wrap;
+         
+       }
+       .btn a{
+         width: 150px;
+         height: 30px;
+         box-shadow: 15px 15px 20px rgb(0 0 0 / 50%), -15px -15px 20px #ffb;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         text-decoration: none;
+         background: yellow;
+         margin: 10px;
+         font-size: 18px;
+         
+       }
+       .btn a:hover{
+         background: #fff;
+       }
+        @media(max-width:450px){
+            .courses .contentte .mxw200p h1 {
+               font-size: 50px;
+               margin: 15px;
+           }
+           .courses .contentte .mxw200p h3 {
+            font-size: 35px;
+           }}

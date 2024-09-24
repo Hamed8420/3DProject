@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Project</title>
+    <link rel="stylesheet" href="CSs/allmetrail.css">
+    <link rel="stylesheet" href="CSs/allproject.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <button class="bar" aria-label="open menu" title="Open Menu" data-nav-toggler="">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
+        
+        <div class="side">
+            
+            <button class="bars" data-nav-toggler>
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+    
+    
+            <div class="sidebar">
+
+                <button class="bars" data-nav-toggler>
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+                
+                <a href="./index.html" >
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <h3>Home</h3>
+                </a>
+    
+                <a href="./allproject.html" >
+                    <i class="fa fa-building" aria-hidden="true"></i>
+                    <h3>Projects</h3>
+                </a>
+                <a href="./allStl.html">
+                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                    <h3>STL</h3>
+                </a>
+                <a href="./allService.html">
+                    <i class="fa fa-server" aria-hidden="true"></i>
+                    <h3>Services</h3>
+                </a>
+                <a href="./allCourses.html">
+                    <i class="fa fa-cubes" aria-hidden="true"></i>
+                    <h3>Course</h3>
+                </a>
+                <a href="./allmetrial.html" class="active">
+                    <i class="fa fa-certificate" aria-hidden="true"></i>
+                    <h3>metrial</h3>
+                </a>
+                
+                <a href="./allfeature.html">
+                    <i class="fa fa-tachometer" aria-hidden="true"></i>
+                    <h3>feature</h3>
+                </a>
+                
+    
+                <a href="./userindex.html">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    <h3>main pag</h3>
+                </a>
+                <span>
+                    <i class="fa fa-external-link" aria-hidden="true" onClick="logout()"></i>
+                    <h3>log out</h3>
+                </span>
+            </div>
+        </div>
+        <div class="content">
+            <section class="section project">
+                <div class="hold">
+                    <div class="group">
+                        <div class="section-title padd-15">
+                            <h2>Metrail</h2>
+                        </div>
+                        <div class="add ">
+                            <button type="submit"><a href="./addmetrial.html">add metrail</a></button>
+                        </div>
+                    </div>
+            
+            
+                    
+        <section class="tags" aria-labelledby="tag-label">
+            <div class="container1">
+    
+              <p class="section-text">
+                this is all matrial we have it...
+              </p>
+    
+              <div class="grid-list">
+    
+    
+              </div> 
+             
+    
+            </div>
+          </section>
+            
+                </div>
+            
+            </section>
+        </div>
+    </div>
+    <script>
+    const fetchMetrail = ()=>{
+
+const accesstoken= localStorage.getItem('access_token'); 
+  fetch('http://localhost:3000/api/getData/material?page=1&size=9',{
+    headers:{
+        'Authorization':`Bearer ${accesstoken}`,
+        "Content-Type":"application/json",
+    },
+}).then(response =>{
+    if(response.status === 500)
+    {
+    const refreshToken=localStorage.getItem("refresh_token");
+fetch('http://localhost:3000/auth/refreshToken',{
+method:"POST",
+headers:{
+"Content-Type":"application/json",
+},
+body:JSON.stringify({
+token:refreshToken
+}),
+}).then(refreshResponse =>{
+if(refreshResponse.ok)
+{
+return refreshResponse.json();
+
+
+}else{
+console.erorr('refresh token is invalid or expired.');
+}
+}).then(data=>{
+localStorage.setItem("access_token",data.accessToken);
+const newAccessToken = localStorage.getItem("access_token");
+fetch('http://localhost:3000/api/getData/material?page=1&size=9',{
+                headers:{
+                    Authorization:`Bearer ${newAccessToken}`,
+                    "Content-Type":"application/json",
+                },
+        }).then(newResponse=>{
+            return newResponse.json();
+        }).then(newData=>{
+            console.log('Data Fetsh Successfully:',newData);
+           
+
+        })
+      
+})
+
+}else{
+    return response.json();
+}
+}).then(data =>{
+const grid_list = document.querySelector('.grid-list');
+
+data.materials.forEach((element,i)=>{
+
+const density1=document.createElement('h3');
+density1.textContent=element.density;
+const nameMetrail= document.createElement('p');
+nameMetrail.classList.add('btn-text');
+nameMetrail.textContent=element.materialName;
+const Card=document.createElement('div');
+Card.classList.add('card')
+Card.classList.add('tag-btn')
+
+// feat.appendChild(img);
+Card.appendChild(density1);
+Card.appendChild(nameMetrail);
+
+const far =document.createElement('div');
+far.classList.add('add');
+far.innerHTML=`
+<div  style=" text-align:center; padding:5px 0;">
+<span id="btn-edit" style="border-radius:6px ; width:80px;text-align:center; color:#FFF;padding:6px 10px; background-color:#0F1729;cursor: pointer; "  onclick="deleteData(${element.id})"> delete</span>
+<a href="updatemetrail.html?id=${element.id}" style="border-radius:6px ; width:80px;text-align:center; color:#FFF;padding:6px 10px; background-color:#0F1729;cursor: pointer; ">Edit</a>
+</div>
+`
+Card.appendChild(far);
+grid_list.appendChild(Card);
+
+
+})
+
+})
+
+
+}
+function main(){
+    fetchMetrail();
+}       
+main()
+// لا يلزم استخدام هذا التابع في هذه الصفحة
+function getQueryStringParams(query) {
+    return query
+        ? (/^[?#]/.test(query) ? query.slice(1) : query)
+            .split('&')
+            .reduce((params, param) => {
+                    let [key, value] = param.split('=');
+                    params[key] = value ? decodeURIComponent(value.replace(/\+/g, ' ')) : '';
+                    return params;
+                }, {}
+            )
+        : {}
+}
+
+
+/*======================== Start delete=================*/
+function deleteData(id)
+{
+
+
+    const accesstoken= localStorage.getItem('access_token'); 
+    fetch(`http://localhost:3000/api/admin/material/deleteMaterial/${id}`,{
+        method:"DELETE",
+    headers:{
+        'Authorization':`Bearer ${accesstoken}`,
+    },
+    }).then(response =>{
+    if(response.status === 500)
+    {
+    const refreshToken=localStorage.getItem("refresh_token");
+    fetch('http://localhost:3000/api/auth/refreshToken',{
+    method:"POST",
+    headers:{
+    "Content-Type":"application/json",
+    },
+    body:JSON.stringify({
+    token:refreshToken
+    }),
+    }).then(refreshResponse =>{
+    if(refreshResponse.ok)
+    {
+    return refreshResponse.json();
+
+
+    }else{
+    console.erorr('refresh token is invalid or expired.');
+    }
+    }).then(data=>{
+    localStorage.setItem("access_token",data.accessToken);
+    const newAccessToken = localStorage.getItem("access_token");
+    fetch(`http://localhost:3000/api/admin/material/deleteMaterial/${id}`,{
+        method:"DELETE",
+                headers:{
+                    Authorization:`Bearer ${newAccessToken}`,
+                },
+        }).then(newResponse=>{
+            return newResponse.json();
+        }).then(newData=>{
+            console.log('Data Fetsh Successfully:',newData);
+        
+        })
+        
+    })
+
+    }else{
+    return response.json();
+    }
+    }).then(data =>{
+        console.log('the delete is delete')
+    console.log("Data fetched SuccessFully:", data);
+    })
+    location.reload();
+}
+    </script>
+    <script src="Js/allproject.js"></script>
+</body>
+</html>

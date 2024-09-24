@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Project</title>
+    <link rel="stylesheet" href="CSs/allCourses.css">
+    <link rel="stylesheet" href="CSs/allproject.css">
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <button class="bar" aria-label="open menu" title="Open Menu" data-nav-toggler="">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
+        
+        <div class="side">
+           
+    
+            <div class="sidebar">
+
+                <button class="bars" data-nav-toggler>
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+                <a href="./index.html">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <h3>Home</h3>
+                </a>
+    
+                <a href="./allproject.html" >
+                    <i class="fa fa-building" aria-hidden="true"></i>
+                    <h3>Projects</h3>
+                </a>
+                <a href="./allStl.html">
+                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                    <h3>STL</h3>
+                </a>
+                <a href="./allService.html">
+                    <i class="fa fa-server" aria-hidden="true"></i>
+                    <h3>Services</h3>
+                </a>
+                <a href="./allCourses.html"  class="active">
+                    <i class="fa fa-cubes" aria-hidden="true"></i>
+                    <h3>Course</h3>
+                </a>
+                <a href="./allmetrial.html">
+                    <i class="fa fa-certificate" aria-hidden="true"></i>
+                    <h3>metrial</h3>
+                </a>
+                
+                <a href="./allfeature.html">
+                    <i class="fa fa-tachometer" aria-hidden="true"></i>
+                    <h3>feature</h3>
+                </a>
+                
+    
+                <a href="./userindex.html">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    <h3>main pag</h3>
+                </a>
+                <span>
+                    <i class="fa fa-external-link" aria-hidden="true" onClick="logout()"></i>
+                    <h3>log out</h3>
+                </span>
+            </div>
+        </div>
+        <div class="content">
+            <section class="section project">
+                <div class="hold">
+                    <div class="group">
+                        <div class="section-title padd-15">
+                            <h2>Lesson</h2>
+                        </div>
+                        <div class="add ">
+                            <!-- <button type="submit"><a href="#">add Lesson</a></button> -->
+                        </div>
+                    </div>
+            
+            
+                    <div class="conatiner-rating">
+                      
+                        <div class="rating">
+                    <div class="frt">
+                            <h3>please enter your rating</h3>
+                          <div class="ger">
+                          <input type="number" id="ser" name="rating" min="1" max="5" required>
+                          </div>
+                    </div>
+                            <button id="submitRating" onClick="addrate()" >send rate</button>
+                          </div>
+                        
+                    </div>
+
+
+
+
+                    
+                    <div class="course-container">  
+            
+                   
+                            
+                            <div class="tbody">
+                             
+                            <!------------------------------------------------------------------------>
+                           
+                            </div>
+                            
+                        
+                    </div>
+            
+                </div>
+            
+            </section>
+            <div class="fer">
+                <button><a href="./allCourses.html">backProject</a></button>
+              </div>
+        </div>
+    </div>
+  
+    <script src="Js/allLesson.js"></script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: "Poppins", 'sans-serif';
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background:linear-gradient(#4671EA , #AC34E7);
+}
+
+.wrapper {
+    width: 500px;
+    padding: 30px;
+    background-color: #FFF;
+    border-radius: 5px;
+}
+
+.from
+{
+    padding-top: 20px ;
+    margin-bottom: 30px;
+    border: 1px dashed #6990f2;
+}
+
+/* input[type="file"]{
+display: none;
+} */
+label
+{
+    display: block;
+    position: relative;
+    background-color: #025bee;
+    color:#FFF;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    width: 300px;
+padding: 18px 0;
+margin: auto;
+border-radius: 8px ;
+cursor: pointer;    
+    
+}
+#num-of-file
+{
+    font-weight: 400;
+    text-align: center;
+    margin: 20px 0 30px;
+}
+
+ul{
+    list-style-type: none;
+    max-height: 230px;
+    overflow-y: scroll;
+}
+li
+{
+    font-weight: 500;
+    background-color: #eff5ff;
+    color:#025bbe;
+    margin: 16px;
+    padding: 18px 16px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+section .row
+
+{
+    background-color: #e9f0ff;
+    margin-bottom: 10px;
+    list-style: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section .row i
+{
+    font-size: 30px;
+    color: #6990f2;
+}
+section .row .fa-check{
+    font-size: 20px;
+}
+section .details span{
+    font-size: 14px;
+}
+.progress-area .row .content{
+    width: 100%;
+    margin-left: 15px;
+}
+.progress-area .details{
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    justify-content: space-between;
+}
+.progress-area .progress-bar
+{
+    height: 6px;
+    width: 100%;
+    background: #FFF;
+    margin-bottom: 4px ;
+    border-radius: 30px;
+}
+.progress-bar .progress
+{
+    height: 100%;
+    width: 0%;
+    background-color: #6990f2;
+    border-radius: inherit;
+}
+.uploaded-area{
+    max-height: 230px;
+    overflow-y: scroll;
+}
+.uploaded-area.onprogress{
+    max-height: 150px;
+
+}
+.uploaded-area::-webkit-scrollbar{
+    width: 10px;
+    background: gray;
+}
+.uploaded-area .row .content
+{
+    display: flex;
+    align-items: center;
+
+}
+.uploaded-area .row .details
+{
+display: flex;
+margin-left: 15px;
+flex-direction: column;
+}
+.uploaded-area .details .size
+{
+    font-size: 11px;
+    color: #404040;
+}
+.uploaded-area .fa-check
+{
+    color: #6990f2;
+    font-size: 16px;
+}
+.container
+{
+    margin-bottom: 20px;
+}
+
+.explain h2
+{
+    color: #6990f2;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.explain textarea
+{
+    width: 100%;
+    height: 60px;
+    padding: 15px;
+    font-size: 16px;
+    border-color: #6990f2;
+    margin-bottom: 20px;
+    outline: none;
+    resize: none;
+    border-radius: 5px;
+    max-height: 250px;
+}
+textarea:focus
+{
+    border-width:2px;
+    padding: 14px;
+    border-color: #4671ea;
+}
+
+.explain textarea::-webkit-scrollbar{
+    width: 0px;
+}
+.header p
+{
+    margin-top: 5px;
+    font-size:20px;
+    color:#4671EA;
+    text-align: center;
+    font-weight: 600;
+}
+.price-input
+{
+    width: 100%;
+    display: flex;
+    margin: 30px 0 35px;
+}
+
+.price-input .field
+{
+     height: 45px;
+     width: 100%;
+     display: flex;
+     align-items: center;
+}
+.field input
+{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border-radius: 5px;
+    font-size: 19px;
+    text-align: center;
+    margin-left: 12px;
+    border: 1px solid #6990f2;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+.field span
+{
+    font-size: 18px;
+    font-weight: 600;
+    color: #4671EA;
+}
+.price-input .separetor
+{
+    width: 130px ;
+    display: flex;
+    font-size: 19px;
+    align-items: center;
+    justify-content: center;
+}
+.upload
+{
+    text-align: center;
+}
+button
+{
+    width: 150px;
+color: white;
+background-color: #6990f2;
+padding: 12px 5px;
+border: none;
+border-radius: 6px;
+font-size: 16px;
+}
+button:hover
+{
+    background-color: #4671ea;
+}

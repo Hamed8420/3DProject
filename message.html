@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSs/message.css">
+    <link rel="stylesheet" href="CSs/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Chat Bot</title>
+</head>
+<body>
+    <h3 class="heading">video gallery</h3>
+  <div class="container">
+    <!-- <div class="main-video">
+        <div class="video">
+            <video src="image/v1.mp4" controls muted ></video>
+            <h3 class="title">01. video title goes here</h3>
+        </div>
+    </div> -->
+    <div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible">Chat with us!
+            <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+        </button>
+
+        <div class="content">
+            <div class="full-chat-block">
+                <!-- Message Container -->
+                <div class="outer-container">
+                    <div class="chat-container">
+                        <!-- Messages -->
+                        <div id="chatbox">
+                            <h5 id="chat-timestamp"></h5>
+                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                        </div>
+
+                        <!-- User input box -->
+                        <div class="chat-bar-input-block">
+                            <div id="userInput">
+                                <input id="textInput" class="input-box" type="text" name="msg"
+                                    placeholder="Tap 'Enter' to send a message">
+                                <p></p>
+                            </div>
+
+                            <div class="chat-bar-icons">
+                                <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
+                                    onclick="heartButton()"></i>
+                                <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                    onclick="sendButton()"></i>
+                            </div>
+                        </div>
+
+                        <div id="chat-bar-bottom">
+                            <p></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="video-list">
+        <div class="notic"><p>Notification <span>17</span> </p> </div>
+        <div class="vid active">
+            <img src="image/profil6.jpg"  >
+           <div class="vir">
+             <h3 class="title">Hozifa Alahmad</h3>
+             <p>@ please bring to me the glass</p>
+
+           </div>
+        </div>
+
+
+        <div class="vid ">
+            <img src="image/profile8.webp"  >
+           <div class="vir">
+             <h3 class="title">Hozifa Alahmad</h3>
+             <p>@ please bring to me the glass</p>
+
+           </div>
+        </div>
+
+        <div class="vid ">
+            <img src="image/profile2.jpg"  >
+           <div class="vir">
+             <h3 class="title">Hozifa Alahmad</h3>
+             <p>@ please bring to me the glass</p>
+
+           </div>
+        </div>
+
+        <div class="vid ">
+            <img src="image/profile3.jpg"  >
+           <div class="vir">
+             <h3 class="title">Hozifa Alahmad</h3>
+             <p>@ please bring to me the glass</p>
+
+           </div>
+        </div>
+
+        <div class="vid ">
+            <img src="image/profile5.jpg"  >
+           <div class="vir">
+             <h3 class="title">Hozifa Alahmad</h3>
+             <p>@ please bring to me the glass</p>
+
+           </div>
+        </div>
+
+        <div class="vid ">
+            <img src="image/profile7.jpg"  >
+           <div class="vir">
+             <h3 class="title">Hozifa Alahmad</h3>
+             <p>@ please bring to me the glass</p>
+
+           </div>
+        </div>
+        <div class="vid ">
+            <img src="image/profile10.jpg"  >
+           <div class="vir">
+             <h3 class="title">Hozifa Alahmad</h3>
+             <p>@ please bring to me the glass</p>
+
+           </div>
+        </div>
+        <div class="vid ">
+            <img src="image/profile3.jpg"  >
+           <div class="vir">
+             <h3 class="title">Hozifa Alahmad</h3>
+             <p>@ please bring to me the glass</p>
+
+           </div>
+        </div>
+        <div class="vid ">
+            <img src="image/profile9.jfif"  >
+           <div class="vir">
+             <h3 class="title">Hozifa Alahmad</h3>
+             <p>@ please bring to me the glass</p>
+           </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="JS/chat.js"></script>
+<script src="Js/response.js"></script>
+<script>
+      let listVideo = document.querySelectorAll('.video-list .vid');
+      let mainVideo = document.querySelector('.main-video video');
+      let title = document.querySelector('.main-video .title');
+      
+      listVideo.forEach(video =>{
+          video.onclick = ()=>{
+              listVideo.forEach(vid => vid.classList.remove('active'));
+              video.classList.add('active');
+              if(video.classList.contains('active'))
+              {
+                  let src = video.children[0].getAttribute('src');
+                  mainVideo.src = src;
+                  let text = video.children[1].innerHTML;
+                  title.innerHTML=text;
+            };
+        };
+    });
+  </script>
+</body>
+</html>

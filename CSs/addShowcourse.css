@@ -1,0 +1,171 @@
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: poppins, sans-serif;
+    font-size: 14px;
+    background-color: hsla(222,47%,11% ,1);
+    color: var(--text-shadow-blue);
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+::-webkit-scrollbar { width: 5px; }
+  
+::-webkit-scrollbar-track { background-color: transparent; }
+
+::-webkit-scrollbar-thumb {
+  background-color: hsla(199, 89%, 49%, 1);
+  border-radius: 200px;
+}
+.container
+{
+    width: 600px;
+    height: 660px;
+    background: #131B30;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px 10px;
+    position: relative;
+    border: 1px solid hsla(216, 33%, 20%, 1);
+}
+input{
+    outline:none;
+
+    width: 85%;
+    height: 40px;
+    padding: 5px;
+    margin-left: auto;
+    color: #363949;
+    font-size: 16px;
+    margin-top:20px ;
+    margin-bottom:20px ;
+border-radius: 6px;
+}
+.des{
+    text-align: center;
+}
+.des input
+{
+    margin-left: 25px;
+    text-align: start;
+}
+input[type="file"]{
+    display: none;
+    }
+    label
+    {
+        display: block;
+        position: relative;
+        background-color: #7D91B0;
+        color:#FFF;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+        width: 300px;
+    padding: 18px 0;
+    margin: 50px;
+    border-radius: 8px ;
+    cursor: pointer;    
+        
+    }
+#btn
+{
+    border: 3px solid dimgrey;
+    width: 150px;
+    padding: 8px 5px;
+   background-color: #7D91B0;
+    color: #FFF;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 28px;
+    text-align: center;
+}
+#btn:hover{
+    background: none;
+    color: #fff;
+}
+.price p
+{
+font-size: 22px;
+text-align: center;
+color: #7D91B0;
+}
+.group{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    /* gap: 3px; */
+}
+.group input
+{
+    font-size:17px
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+.group span
+{
+    font-size: 20px;
+    color: #7D91B0;
+}
+.der input
+{
+    font-size: 25px;
+    width: 50%;
+    text-align: start;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+@media(max-width:675px)
+{
+    .container
+    {
+       width: 90%;
+    }
+    input{
+        width: 90%;
+    }
+ 
+}
+@media(max-width:475px)
+{
+    .container
+    {
+       width: 90%;
+    }
+    input{
+        width: 90%;
+    }
+    label{
+        width: 90%;
+    }
+    .group{
+       grid-template-columns: 1fr;
+    }
+    .group input{
+        width: 90%;
+    }
+ 
+}

@@ -1,0 +1,223 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: "Poppins",sans-serif;
+}
+body{
+    
+    background-color:  hsl(240, 100%, 6%) ;
+    height: 100vh;
+    margin-bottom: 100px;
+}
+.Wapper{
+    width: 100%;
+ margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#searsh-contaier{
+    width: 100%;
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#searsh-contaier input{
+    width: 50%;
+    background-color: transparent;
+    border-bottom: 2px solid aqua;
+    padding: 1em 0.3em;
+}
+#searsh-contaier input:focus{
+    border-bottom: #22169e;
+
+}
+#searsh-contaier button{
+    
+    padding: 1em 2em;
+    margin-left: 1em;
+    background-color: aqua;
+    color: rgb(14, 21, 28);
+    border-radius: 5px;
+    margin-top: 0.5em;
+
+}
+#butons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    gap: 60px;
+
+}
+#butons button{
+    background-color: transparent;
+    border: 2px solid aqua;
+    padding: 1em 2.2em;
+    border-radius: 5px;
+    color: aqua;
+    width: 130px;
+    margin-left: 3em;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+#butons button:hover{
+    background-color: aqua;
+    color: rgb(14, 21, 28);
+}
+.project{
+    padding: 80px 40px;
+    width: 100%;
+    height:auto;
+}
+.project .list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(250px,1fr));
+    gap: 30px;
+    margin-bottom: 48px;
+}
+
+.project .list .card{
+    position: relative;
+    padding: 8px;
+    background-color:hsla(222, 44%, 13%, 1);
+    border: 1px solid hsla(216, 33%, 20%, 1);
+    border-radius: 8px;
+    width: 250px;
+    height:  510px;
+}
+.project .list .card .img-cover1{
+
+    width: 95%;
+    margin: 5px auto;
+    height: 215px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding-bottom: 5px;
+    position: relative;
+    margin-left: 4px;
+    margin-bottom: 4px;
+    border-radius: 5px;
+   
+   
+
+}
+.project .list .card .card-last {
+    border-top: 3px solid hsla(216, 33%, 20%, 1);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    font-size: 10px;
+    margin-block: 20px;
+    margin-block-start: 24px;
+    padding-top: 10px;
+    height: 20px;
+}
+.project .list .card .card-last h2{
+    display: flex;
+     gap: 3px;
+    align-items: center;
+    color: hsla(217, 17%, 48%, 1);
+    
+
+}  
+.project .list .card h4{
+    font-size: 1.4rem;
+    color:hsla(216, 33%, 68%, 1);
+    margin-bottom: 7px;
+    height: 80px;
+}
+
+.profile-card{
+display: flex;
+align-items: center;
+gap: 10px;
+height: 50px; 
+}
+ 
+             
+.profile-card  .profile-banner{
+    border-radius: 50%;
+}
+.profile-card .prof p{
+    font-weight: 700;
+    color: hsla(217, 17%, 48%, 1);
+}
+
+
+
+.project .list  .card .btn{
+    
+  
+        background: rgb(42, 144, 144);
+        outline: none;
+        border: none;
+        font-weight: 500;
+        cursor: pointer;
+        color: #d8d2d2;
+        font-size: 20px;
+        width: 232px;
+        height: 23.400px;
+        padding: 20px 10px;
+        margin-top: 15px;
+        border: 1px solid hsla(216, 33%, 20%, 1); 
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+
+
+    }
+    .project .list  .card .btn:hover{  
+
+        background: none;
+        border:3px solid aqua;
+        color:aqua; 
+    }
+    a{
+        text-decoration: none;
+        color: #d8d2d2;
+        background: none;
+    }
+    a:hover{
+    background: none;
+    color:aqua; 
+}
+
+  
+
+
+
+@media (max-width: 445px){
+    #butons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3%;
+        flex-wrap: wrap;
+        max-width: 100%;
+        gap: 20px;
+    
+    }
+    #butons button{
+        background-color: transparent;
+        border: 2px solid aqua;
+        padding: 1em 2.2em;
+        border-radius: 5px;
+        color: aqua;
+        width: 100px;
+        margin-left: 3em;
+        margin-right: 1em;
+        cursor: pointer;
+    }
+}

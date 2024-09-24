@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSs/addproject.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+
+    <title>add STL</title>
+  </head>
+  <body>
+    
+    <div class="container">
+      <div class="content">
+
+        
+        <input type="file" id="file-input" multiple />
+      <label for="file-input">
+        <i class="fa fa-upload" aria-hidden="true"></i>
+        Choose File
+      </label>
+      <input type="file" id="file1"  />
+      <label for="file1">
+        <i class="fa fa-upload" aria-hidden="true"></i>
+        Choose Image OutSide
+      </label>
+      <input type="file" id="file2" multiple />
+      <label for="file2">
+        <i class="fa fa-upload" aria-hidden="true"></i>
+        Choose Images
+      </label>
+      <input type="file" id="file3" />
+      <label for="file3">
+        <i class="fa fa-upload" aria-hidden="true"></i>
+        Choose Image Moving
+      </label>
+ 
+        <input type="text" id="title" placeholder="enter name of project" />
+        
+        <input type="text" id="explain"placeholder="enter explain of project" />
+     
+      </div>
+    
+      <div class="group">
+        
+        <input type="number" id="length" placeholder="length">
+  
+
+        <input type="number" id="width" placeholder="width">
+        <input type="number" id="height" placeholder="height">
+        <input type="number" id="price" placeholder="price">
+        <h3>color</h3>
+        <input type="color" id="color" multiple >
+
+            <select id="test" onchange="Selected(this)" multiple>
+              <option>اختر عنصرًا</option>
+            </select>
+            <button id="sor" onclick="aOption()"><i class="fa fa-plus-square-o" aria-hidden="true"></i></button>
+       
+        <div id="selecte-value"></div>
+
+
+        <select id="select" onchange="showSelected(this)" multiple>
+          <option value="">اختر عنصرًا</option>
+        </select>
+            <button id="sere" onclick="addOption()"><i class="fa fa-plus-square-o" aria-hidden="true"></i></button>
+      
+     
+        <div id="selected-values"></div>
+        
+
+        <button id="btn" onclick="addStl()"> ADD</button>
+      </div>
+    </div>
+    <script src="Js/addSTL.js">
+
+    </script>
+  </body>
+</html>

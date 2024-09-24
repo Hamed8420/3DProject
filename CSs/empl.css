@@ -1,0 +1,153 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background-color:#2e2e2e;
+ 
+} 
+.mx{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+  
+
+ .mx h3{
+  width: 100%;
+  position: relative;
+  font-size: 35px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  color:yellow;
+  text-align: center;
+  border: 2px solid #000;
+  background:#000;
+  margin: 10px;
+  padding: 10px;
+}
+ .mx h3:hover{
+  background: none;
+}
+section{
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 100px;
+
+}
+
+.container{
+    position: relative;
+    max-width: 1300px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 25px;   
+    gap:70px
+}
+  
+
+.container .card{
+  position: relative;
+  max-width: 300px;
+  height: 300px;
+  background: #fff;
+  margin: 100px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow:0 5px 202px rgba(0, 0, 0, 0.5) ;
+  transition: 0.3s ease-in-out;
+  
+}
+.container .card:hover{
+  height: 500px;
+}
+.container .card .imgbx{
+  position: relative;
+  max-width: 269px;
+  height: 277px;
+  top: -195px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.container .card .imgbx img{
+  max-width: 100%;
+  border-radius: 4px;
+}
+.container .card .content{
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3 ease-in-out;
+
+  
+
+}
+.container .card:hover .content{
+  visibility: visible;
+  opacity: 1;
+  margin-top: -115px;
+  transition-delay:0.3s;
+}
+.container .card .content h2{
+  font-size: 40px;
+  font-weight: 200;
+  margin-bottom: 10px;
+  color:rgb(37, 37, 37);
+}
+
+
+
+.container .card .content h4{
+  position: relative;
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  color: rgb(92, 92, 2);
+
+}
+
+    
+.container .card .content li{
+  list-style: none;
+  margin: 5px;
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+.btn a{
+  width: 150px;
+  height: 30px;
+  box-shadow: 15px 15px 20px rgb(0 0 0 / 50%), -15px -15px 20px #ffb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: yellow;
+  margin: 10px;
+  font-size: 18px;
+  
+}
+.btn a:hover{
+  background: #fff;
+}

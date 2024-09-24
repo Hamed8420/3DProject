@@ -1,0 +1,144 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    padding:20px;
+    display:flex;
+    background: #2e2e2e;
+}
+form{
+    padding: 60px 0px;
+    position: relative;
+}
+input{
+    outline:none;
+    border:none;
+    width: 400px;
+    height: 35px;
+    border-bottom: 2px solid yellow;
+    background: none;
+    padding: 5px;
+    color:azure;
+    font-size: 20px;
+    margin:10px 0;
+}
+.btn {
+    width: 150px;
+    height: 30px;
+    color: #2e2e2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: yellow;
+    margin: 10px;
+}
+.btn:hover{
+    background: #fff;
+}
+ a{
+    width: 150px;
+    height: 30px;
+    color: #2e2e2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: yellow;
+    margin: 10px;
+
+    
+  }
+   a:hover{
+    background: #fff;
+  }
+
+@media (max-width:575px) {
+
+body{
+    height: 100vh;
+    padding:40px;
+    display:flex;
+}
+    input{
+        outline:none;
+        border:none;
+        width: 300px;
+        height: 35px;
+        border-bottom: 2px solid yellow;
+        background: none;
+        padding: 5px;
+        color:azure;
+        font-size: 20px;
+        margin:10px 0;
+    }
+    .btn {
+        width: 150px;
+        height: 30px;
+        color: #2e2e2e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        background: yellow;
+        margin: 10px;
+}
+a{
+    width: 150px;
+    height: 30px;
+    color: #2e2e2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: yellow;
+    margin: 10px;
+   }
+
+}
+@media (max-width:335px) {
+
+    body{
+        height: 100vh;
+        padding:10px;
+        display:flex;
+    }
+        input{
+            outline:none;
+            border:none;
+            width: 250px;
+            height: 35px;
+            border-bottom: 2px solid yellow;
+            background: none;
+            padding: 5px;
+            color:azure;
+            font-size: 20px;
+            margin:10px 0;
+        }
+        .btn {
+            width: 150px;
+            height: 30px;
+            color: #2e2e2e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            background: yellow;
+            margin: 10px;
+    }
+    a{
+        width: 150px;
+        height: 30px;
+        color: #2e2e2e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        background: yellow;
+        margin: 10px;
+       }
+    
+    }

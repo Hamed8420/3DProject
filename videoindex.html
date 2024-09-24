@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="CSs/videolesson.css">
+    <title>Lesson</title>
+</head>
+<body>
+    <h3 class="header">The first lesson</h3>
+    <div class="container">
+        <div class="main-video">
+            <div id="video">
+                <video src="" id="videoe" controls  ></video>
+                <div class="adress">
+               <div class="gfs">
+                <span>01.</span>
+                <h3 class="title"> video title goes here</h3>
+               </div>
+             <div class="ser">
+                <ul>
+                    <li><i class="fa-solid fa-comment-dots"></i></li>
+                    <li><i class="fa-solid fa-thumbs-up" id="likeButton"></i></li>
+                </ul>
+                
+             </div>
+                <!-- <a href=""><i class="fa-solid fa-address-book"></i></a> -->
+                </div>
+            </div>
+        </div>
+        <div class="comment">
+
+
+          <div class="input-comment">
+            <input type="text" name="comment" id="comment" placeholder="write comment">
+            <i class="fa fa-paper-plane" aria-hidden="true" onclick="addCommet()"></i>
+          </div>
+          
+          <div class="group">
+
+            
+             </div>
+             
+      
+                  </div>
+                  <div class="fer">
+                    <button><a href="./allStl.html">backProject</a></button>
+                  </div>
+            </div>
+        
+
+
+
+
+
+    </div>
+
+<script>
+  
+</script>
+
+    <script>
+//         function ComentData(){
+//     const params = getQueryStringParams(window.location.search);
+//     const itemId = params.id;
+//     console.log(itemId);
+//     const accesstoken= localStorage.getItem('access_token'); 
+// const URl = `http://localhost:3000/api/Comment/getComment/${itemId}`;
+
+// fetch(URl,{
+//     headers:{
+//         'Authorization':`Bearer ${accesstoken}`,
+//         "Content-Type":"application/json",
+//     },
+// }).then(response =>{
+//     if(response.status === 500)
+//     {
+//     const refreshToken=localStorage.getItem("refresh_token");
+// fetch('http://localhost:3000/api/auth/refreshToken',{
+// method:"POST",
+// headers:{
+// "Content-Type":"application/json",
+// },
+// body:JSON.stringify({
+// token:refreshToken
+// }),
+// }).then(refreshResponse =>{
+// if(refreshResponse.ok)
+// {
+// return refreshResponse.json();
+
+
+// }else{
+// console.erorr('refresh token is invalid or expired.');
+// }
+// }).then(data=>{
+// localStorage.setItem("access_token",data.accessToken);
+// const newAccessToken = localStorage.getItem("access_token");
+// fetch(URl,{
+//                 headers:{
+//                     Authorization:`Bearer ${newAccessToken}`,
+//                     "Content-Type":"application/json",
+//                 },
+//         }).then(newResponse=>{
+//             return newResponse.json();
+//         }).then(newData=>{
+//             console.log('Data Fetsh Successfully:',newData);
+            
+//         })
+      
+// })
+
+// }else{
+//     return response.json();
+// }
+// }).then(data =>{
+//     console.log(data)
+// const group=document.querySelector('.group'); 
+//    data.comments.forEach(element => {
+//     console.log(element)
+
+// const comment_card=document.createElement('div');
+// comment_card.classList.add('comment-card')
+
+// const card_text=document.createElement('p');
+// card_text.classList.add('card-text');
+// card_text.textContent=element.description;
+
+// const adress1=document.createElement('div');
+// adress1.classList.add('adress1')
+
+// const profile_banner=document.createElement('div');
+// profile_banner.classList.add('profile-banner');
+// const img = document.createElement('img');
+// img.src=  `http://localhost:3000/${element.userImage}`;
+// profile_banner.appendChild(img);
+// adress1.appendChild(profile_banner);
+// const der=document.createElement('div');
+// der.classList.add('der');
+
+// const card_title=document.createElement('p');
+// card_title.classList.add('card-title');
+
+// const tr=document.createElement('span');
+// tr.classList.add('tr');
+// tr.textContent=element.user.firstName;
+// card_title.appendChild(tr);
+// const ts=document.createElement('span');
+// ts.classList.add('ts');
+// ts.textContent=element.user.lastName;
+// card_title.appendChild(ts);
+// const icon=document.createElement('i');
+// icon.classList.add('fa','fa-thumbs-up');
+// icon.setAttribute('aria-hidden','true');
+
+// der.appendChild(card_title);
+// der.appendChild(icon)
+// adress1.appendChild(der);
+
+// comment_card.appendChild(card_text);
+// comment_card.appendChild(adress1);
+// const far =document.createElement('div');
+// far.classList.add('add');
+// far.innerHTML=`
+// <div  style="margin:10px 0 15px; display: flex;justify-content: space-between;text-align: center;">
+// <span id="btn-edit" style="border-radius:6px ; width:50px;text-align:center; color:#FFF;padding:6px 10px; background-color:#0F1729;cursor: pointer; "  onclick="deleteData(${element.id})"> dele</span>
+// <a href="updateComment.html?id=${element.id}" style="border-radius:6px ; width:50px;text-align:center; color:#FFF;padding:6px 10px; background-color:#0F1729;cursor: pointer;" >Edit</a>
+// </div>
+// `
+// comment_card.appendChild(far);
+// group.appendChild(comment_card)
+//    });
+// })
+// }
+// ComentData()
+
+
+function getQueryStringParams(query) {
+    return query
+        ? (/^[?#]/.test(query) ? query.slice(1) : query)
+            .split('&')
+            .reduce((params, param) => {
+                    let [key, value] = param.split('=');
+                    params[key] = value ? decodeURIComponent(value.replace(/\+/g, ' ')) : '';
+                    return params;
+                }, {}
+            )
+        : {}
+}
+    </script>
+
+    <script src="Js/videolesson.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+
+</script>
+</body>
+</html>

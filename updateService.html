@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+  <link rel="stylesheet" href="CSs/updateService.css">
+    <title>UpdateService</title>
+</head>
+<body>
+  
+<div id="ser">
+  <!-- <input type="file" id="file-input" id="image" multiple/> -->
+  <input type="file" id="file-input" id="image" multiple/>
+  <label for="file-input">
+    <i class="fa fa-upload" aria-hidden="true"></i>
+    Choose File
+</label>
+  <input type="text" id="namedata" placeholder="please update your title"/>
+  <input type="text" id="explaindata" placeholder="please update your explain"/>
+
+
+  <button id="tes" style="cursor:pointer" onClick="updateAdat()"> Update</button>
+</div>
+
+  <script src="Js/index.js"></script>
+    <script src="Js/updateService.js"></script>
+    <script>
+	window.addEventListener('load', function() {
+			const params = getQueryStringParams(window.location.search);
+			const itemId = params.id;
+      // console.log(itemId)
+
+			if (itemId) {
+        const newAccessToken = localStorage.getItem("access_token");
+				fetch(`http://localhost:3000/getData/Services/${itemId}`,{
+          headers:{
+                            Authorization:`Bearer ${newAccessToken}`,
+                            "Content-Type":"application/json",
+                        },
+        })
+					.then(response => response.json())
+					.then(data => {
+						const itemDetails = document.getElementById('ser');
+
+console.log(data)
+document.getElementById('namedata').value.innerHTML=data.service.serviceName;
+document.getElementById('explaindata').value.innerHTML=data.service.description;
+
+					})
+					.catch(error => console.error(error));
+			}
+		});
+
+  
+		function getQueryStringParams(query) {
+			return query
+				? (/^[?#]/.test(query) ? query.slice(1) : query)
+					.split('&')
+					.reduce((params, param) => {
+							let [key, value] = param.split('=');
+							params[key] = value ? decodeURIComponent(value.replace(/\+/g, ' ')) : '';
+							return params;
+						}, {}
+					)
+				: {}
+		}
+    </script>
+</body>
+</html>

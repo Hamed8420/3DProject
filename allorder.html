@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/index.css">
+    <title>Project Hozifa</title>
+</head>
+
+<body>
+    <div class="container">
+        <button class="bar" aria-label="open menu" title="Open Menu" data-nav-toggler="">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
+        
+        <div class="side">
+         
+    
+    
+            <div class="sidebar">
+                <button class="bars" data-nav-toggler>
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+                
+                <a href="./index.html" class="active">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <h3>Home</h3>
+                </a>
+    
+                <a href="./allproject.html" >
+                    <i class="fa fa-building" aria-hidden="true"></i>
+                    <h3>Projects</h3>
+                </a>
+                <a href="./allStl.html">
+                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                    <h3>STL</h3>
+                </a>
+                <a href="./allService.html">
+                    <i class="fa fa-server" aria-hidden="true"></i>
+                    <h3>Services</h3>
+                </a>
+                <a href="./allCourses.html">
+                    <i class="fa fa-cubes" aria-hidden="true"></i>
+                    <h3>Course</h3>
+                </a>
+                <a href="./allmetrial.html">
+                    <i class="fa fa-certificate" aria-hidden="true"></i>
+                    <h3>metrial</h3>
+                </a>
+                
+                <a href="./allfeature.html">
+                    <i class="fa fa-tachometer" aria-hidden="true"></i>
+                    <h3>feature</h3>
+                </a>
+                
+    
+                <a href="./userindex.html">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    <h3>main pag</h3>
+                </a>
+                <span>
+                    <i class="fa fa-external-link" aria-hidden="true" onClick="logout()"></i>
+                    <h3>log out</h3>
+                </span>
+            </div>
+        </div>
+
+        <div class="content">
+            <section class="section">
+                    <div class="row">
+        
+                            <div class="main">
+                               
+                              
+                                   
+                                    <!-- ---------------- End in Top -------------------->
+    
+                                
+    
+                               
+                                
+                                
+                            
+                                <!-------------------------- End Insight------------------------>
+
+                                <div class="recent-order">
+                                    <h2>Recent Order</h2>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>numorder</th>
+
+                                                <th>idItem</th>
+                                                <th>orderType</th>
+                                                <th>color</th>
+                                                <th>width</th>
+                                                <th>length</th>
+                                                <th>height</th>
+                                                <th>material</th>
+                                                <th>address</th>
+                                                
+
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                         
+                                          
+                                        </tbody>
+                                    </table>
+                                    
+
+                                </div>
+                            </div>
+
+
+                          
+                        
+                    </div>
+                
+            </section>
+
+<!----------------------------Start section Report------------------------>
+
+<!----------------------------end section Report------------------------>
+
+
+
+        </div>
+    </div>
+    <script >
+        const fetchOrder = ()=>{
+
+const accesstoken= localStorage.getItem('access_token'); 
+  fetch('http://localhost:3000/api/payment/getOrder?page=1&size=24',{
+    headers:{
+        'Authorization':`Bearer ${accesstoken}`,
+        "Content-Type":"application/json",
+    },
+}).then(response =>{
+    if(response.status === 500)
+    {
+    const refreshToken=localStorage.getItem("refresh_token");
+fetch('http://localhost:3000/auth/refreshToken',{
+method:"POST",
+headers:{
+"Content-Type":"application/json",
+},
+body:JSON.stringify({
+token:refreshToken
+}),
+}).then(refreshResponse =>{
+if(refreshResponse.ok)
+{
+return refreshResponse.json();
+
+
+}else{
+console.erorr('refresh token is invalid or expired.');
+}
+}).then(data=>{
+localStorage.setItem("access_token",data.accessToken);
+const newAccessToken = localStorage.getItem("access_token");
+fetch('http://localhost:3000/api/payment/getOrder?page=1&size=24',{
+                headers:{
+                    Authorization:`Bearer ${newAccessToken}`,
+                    "Content-Type":"application/json",
+                },
+        }).then(newResponse=>{
+            return newResponse.json();
+        }).then(newData=>{
+            console.log('Data Fetsh Successfully:',newData);
+           
+
+        })
+      
+})
+
+}else{
+    return response.json();
+}
+}).then(data =>{
+const tbody = document.querySelector('tbody');
+
+data.orders.forEach((element,i)=>{
+    const row = document.createElement('tr');
+    const cell1 = document.createElement('td');
+    const cell2 = document.createElement('td');
+    const cell3 = document.createElement('td');
+    const cell4 = document.createElement('td');
+    const cell5 = document.createElement('td');
+    const cell6 = document.createElement('td');
+    const cell7 = document.createElement('td');
+    const cell8 = document.createElement('td');
+    const cell9 = document.createElement('td');
+
+    cell1.textContent = i
+    cell2.textContent = element.orderId;
+    cell3.textContent = element.orderType; 
+    cell4.textContent = element.color;
+    cell5.textContent = element.width; 
+    cell6.textContent = element.length;
+    cell7.textContent = element.height; 
+    cell8.textContent = element.material;
+    cell9.textContent = element.address;
+    row.appendChild(cell1);
+    row.appendChild(cell2);
+    row.appendChild(cell3);
+    row.appendChild(cell4);
+    row.appendChild(cell5);
+    row.appendChild(cell6);
+    row.appendChild(cell7);
+    row.appendChild(cell8);
+    row.appendChild(cell9);
+    tbody.appendChild(row);
+
+
+
+})
+
+})
+
+
+}
+function main(){
+    fetchOrder();
+}       
+main()
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+<script src="JS/delete.js"></script>
+<script src="JS/updateService.js"></script>
+<script src="Js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    font-family: 'Nunito','sans-serif';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+body
+{
+    background-color: #2e2e2e;
+  
+
+
+
+}
+.container
+{
+       width: 100%;
+      height: auto;
+     
+}
+.container .header
+{
+    width: 100%;
+    height: 90px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.items-controller
+{
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid #fff;
+    background-color: #FFF;
+    border-radius: 6px;
+    margin-right: 20px;
+
+}
+select
+{
+    padding: 2px;
+    margin: 0 10px;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    background-color: transparent;
+    background-color: #2e2e2e;
+    color: #FFF;
+    border-radius: 20%;
+
+}
+.container .group
+{
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 48px;
+    margin: 30px;
+}
+.der
+{
+    position: relative;
+    padding: 8px;
+    background-color: #FFF;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    outline: 1.5px solid #CCC;
+    border-radius: 8px;
+    width: 210px;
+
+}
+.der .overlay
+{
+position: absolute;
+top: 0;
+left: 0;
+height: 75%;
+width: 85px;
+background-color: rgba(0, 0, 0, 0.7);
+z-index: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+line-height: 70px;
+}
+.der .overlay ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color:#fff;
+    font-size: 15px;
+}
+
+.der .overlay ul li button{
+padding: 3px;
+border-radius: 7px;
+border: none;
+background-color: yellow;
+color: #2e2e2e;
+font-size: 15px;
+text-transform: capitalize;
+cursor: pointer;
+transition: .5s; 
+}
+.der .overlay ul li button:hover{
+   color: yellow;
+   background-color: #2e2e2e;
+
+}
+.image
+{
+    border-bottom: 2px solid;
+
+}
+.image img{
+    width: 95%;
+    margin: 5px auto;
+    height: 215px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding-bottom: 5px;
+    position: relative;
+   margin-left: 4px;
+
+}
+.overlay span
+{
+    position: absolute;
+    color: #FFF;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+}
+.der .name h3
+{
+    color: rgba(0, 0, 0, 0.8);
+    margin: 3px;
+}
+.der .name p
+{
+    color: #777;
+    margin-bottom: 3px;
+}
+.der .view
+{
+display: flex;
+justify-content: space-between;
+margin-top: 9px;
+}
+.icon span
+{
+    font-size: 16px ;
+    font-weight: 600;
+}
+.fa-star
+{
+    font-size: 16px;
+    color: gold;
+}
+.view .fa-thumbs-up
+{
+    color: blue;
+}
+.view .fa-commenting-o
+{
+    color: #777;
+}
+.bottom-field
+{
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+}
+.pagination
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination li
+{
+    list-style: none;
+    padding: 2px;
+    margin: 10px;
+    flex-shrink: 0;
+    text-align: center;
+    border: 1px solid #999;
+    border-radius: 5px;
+    color: #999;
+}
+.pagination li.active
+{
+background-color: #32d6aa;
+color: white;
+border-color: #32d6aa;
+}
+.pagination li a
+{
+    color: inherit;
+    padding: 3px 8px;
+    display:block ;
+    font-family: sans-serif;
+    font-size: 13px;
+}
+.add button{
+    width: 90px;
+background-color:#fff;
+padding: 6px;
+transition: 0.3s;
+border-radius: 6px;
+border: none;
+}
+.add button:hover
+{
+    background-color:yellow;
+}
+
+.add button a
+{
+    color: #000;
+}
+

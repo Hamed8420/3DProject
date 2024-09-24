@@ -1,0 +1,209 @@
+*{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+}
+
+body{
+    background-color:  hsl(240, 100%, 6%);
+  
+}
+
+
+
+.header{
+    color: aqua;
+    font-size: 40px;
+    text-align: center;
+    padding: 5%;
+}
+
+
+
+.container{
+    width: 100%;
+    padding: 0 5%;
+
+}
+
+
+.container .main-video{
+    background-color: #131B30;
+    border-radius:10px ;
+    box-shadow: 0 0 10px 2px rgba(100,100,100,0.1);
+    padding: 10px;
+    width: 100%;
+}
+
+
+
+.container .main-video video{
+    width:100% ;
+    border-radius:10px ;
+}
+.container .main-video .adress{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px ;
+}
+.ser{
+    display: flex;
+    justify-content: space-around   ;
+    align-items: center;
+}
+
+.container .main-video .adress .title {
+  color: aliceblue;
+  font-size: 20px;
+  margin-left: 10px;
+  
+}
+.container .main-video ul{
+    display: flex;
+    padding: 5px 10px;
+    justify-content: end;
+    align-items: end;
+    width: 50%;
+    
+
+}
+
+
+.container .main-video ul li{
+    list-style: none;
+    padding: 0 20px;
+}
+.container .main-video ul li i{
+    color:aliceblue;
+    font-size: 23px;
+}
+
+.comment{
+    background-color: #131B30;
+    border-radius:10px ;
+    box-shadow: 0 0 10px 2px rgba(100,100,100,0.1);
+    padding: 10px;
+    width: 100%;
+    height: 500px;
+    margin-top: 30px;
+    overflow-y: scroll;
+
+}
+.comment .headline{
+    color:  hsla(199, 69%, 84%, 1);
+    line-height: 1.3;
+    font-size: 2rem;
+     margin: 40px 0; 
+ }
+
+ .comment .headline .span { position: relative; }
+
+ .comment .headline .span::after {
+  content: "";
+  display: block;
+  width: 96px;
+  height: 3px;
+  background-color: hsla(199, 89%, 49%, 1);
+  margin-block-start: 10px;
+}
+.comment .input-comment input{
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    border: 2px solid rgb(0, 72, 72);
+    border-radius:10px ;
+    margin: 10px 0;
+
+}
+.comment .comment-list li{
+    padding-block-end: 22px;
+    border-block-end: 1px solid rgb(34, 48,86);
+    margin-block-end: 22px;
+}
+.comment .comment-card .card-text {
+    color: hsla(216, 33%, 68%, 1);
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-block-end: 20px;
+  }
+  .comment .comment-list .comment-card .adress1{
+    display: flex;
+    width: 100%;
+
+  }
+
+  .comment .comment-list .comment-card .profile-card {
+    color:  hsla(217, 17%, 48%, 1);
+    font-size: 1.4rem;
+    width: 50%;
+  }
+  .comment .comment-card .profile-card .profile-banner img{
+    background-color:  hsla(216, 33%, 20%, 1);
+    overflow: hidden;
+    border-radius: 50%;
+   width: 32px;
+   height: 32px;
+  }
+  .comment .comment-list .comment-card  .card-title{
+  color: hsla(199, 69%, 84%, 1);
+  font-size: 1.4rem;
+  font-weight: 700;
+  }
+  .comment .comment-list  .comment-card .card-date { font-size: 1.4rem }
+
+  .comment .comment-list .comment-card .adress1 ul{
+    display: flex;
+    padding: 5px 10px;
+    justify-content: end;
+    align-items: end;
+    width: 50%;
+
+  }
+  .comment .comment-list .comment-card .adress1 ul li{
+    list-style: none;
+    padding: 0 10px; 
+  }
+
+  .comment .comment-list .comment-card .adress1 ul li i{
+  color:aliceblue;
+  font-size: 23px;
+}
+.input-comment
+{
+    display: flex;
+    align-items: center;
+}
+.input-comment .fa-paper-plane
+{
+    color: blue;
+    font-size: 20px;
+}
+.der{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.der p span{
+    color: #777;
+    margin-right:3px;
+    font-size: 16px;
+}
+.der .fa{
+    color: blue;
+    font-size: 20px;
+}
+.adress a{
+  color: #92A8c8;
+  margin-top: 10px;   
+}
+.gfs{
+display: flex;
+justify-content: center;
+align-items: center;
+}

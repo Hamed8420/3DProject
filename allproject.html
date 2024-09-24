@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="refresh" content="10"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Project</title>
+    <link rel="stylesheet" href="CSs/allproject.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <button class="bar" aria-label="open menu" title="Open Menu" data-nav-toggler="">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
+        
+        <div class="side">
+            <!-- <button id="menu-btn">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <div class="top">
+                
+              
+                <div class="close" id="close-btn">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+            </div> -->
+         
+
+           
+    
+            <div class="sidebar">
+
+                <button class="bars" data-nav-toggler>
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+                
+                <a href="./index.html" >
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <h3>Home</h3>
+                </a>
+    
+                <a href="./allproject.html" class="active" >
+                    <i class="fa fa-building" aria-hidden="true"></i>
+                    <h3>Projects</h3>
+                </a>
+                <a href="./allStl.html">
+                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                    <h3>STL</h3>
+                </a>
+                <a href="./allService.html">
+                    <i class="fa fa-server" aria-hidden="true"></i>
+                    <h3>Services</h3>
+                </a>
+                <a href="./allCourses.html">
+                    <i class="fa fa-cubes" aria-hidden="true"></i>
+                    <h3>Course</h3>
+                </a>
+                <a href="./allmetrial.html">
+                    <i class="fa fa-certificate" aria-hidden="true"></i>
+                    <h3>metrial</h3>
+                </a>
+                
+                <a href="./allfeature.html">
+                    <i class="fa fa-tachometer" aria-hidden="true"></i>
+                    <h3>feature</h3>
+                </a>
+                
+    
+                <a href="./userindex.html">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    <h3>main pag</h3>
+                </a>
+                <span>
+                    <i class="fa fa-external-link" aria-hidden="true" onClick="logout()"></i>
+                    <h3>log out</h3>
+                </span>
+            </div>
+            <!------------------------------------------------------------>
+
+            
+        
+            
+          
+                
+          
+          
+          
+          
+      
+           
+
+
+
+
+        </div>
+        <div class="content">
+            <section class="section project">
+                <div class="hold">
+                    <div class="group">
+                        <div class="section-title padd-15">
+                            <h2>Project</h2>
+                        </div>
+                        <div class="add ">
+                            <button type="submit"><a href="./addproject.html">add Project</a></button>
+                            
+                        </div>
+                    </div>
+                    <div class="tre">
+    
+                        <div class="ds">
+                            <input type="text" id="searchInput" placeholder="Enter search term...">
+                            <div id="searchResults"></div>
+                    
+                      </div>
+                       </div>
+
+
+                    <div class="menu-container">
+                        <!-- <div class="menu" data-name="c-1">
+                            <div class="box">
+                                <img src="image/stl1.jpg" alt="">
+                               <h4>hussein</h4>
+                            </div>
+                            <div class="show">
+                                <button type="submit"><a href="./project.html">Show Project</a></button>
+                                <div class="icon">
+                                    <span>3.6</span>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-------------- end menu---------------------->
+
+
+                    
+                    </div>
+
+                </div>
+
+            </section>
+        </div>
+    </div>
+    <script >
+
+const allopject= ()=>
+{
+
+    const accesstoken= localStorage.getItem('access_token'); 
+  fetch('http://localhost:3000/api/getData/Project?page=1&size=20',{
+    headers:{
+            'Authorization':`Bearer ${accesstoken}`,
+        "Content-Type":"application/json",
+        }
+}).then(response =>{
+    if(response.status === 500)
+    {
+    const refreshToken=localStorage.getItem("refresh_token");
+fetch('http://localhost:3000/api/auth/refreshToken',{
+method:"POST",
+headers:{
+"Content-Type":"application/json",
+},
+body:JSON.stringify({
+token:refreshToken
+}),
+}).then(refreshResponse =>{
+if(refreshResponse.ok)
+{
+return refreshResponse.json();
+
+
+}else{
+console.erorr('refresh token is invalid or expired.');
+}
+}).then(data=>{
+localStorage.setItem("access_token",data.accessToken);
+const newAccessToken = localStorage.getItem("access_token");
+fetch('http://localhost:3000/api/getData/Project?page=1&size=20',{
+                headers:{
+                    Authorization:`Bearer ${newAccessToken}`,
+                    "Content-Type":"application/json",
+                },
+        }).then(newResponse=>{
+            return newResponse.json();
+        }).then(newData=>{
+            console.log('Data Fetsh Successfully:',newData);
+            
+        })
+      
+})
+
+}else{
+    return response.json();
+}
+}).then(data =>{
+    console.log(data)
+        const menu_container =document.querySelector('.menu-container');
+        data.projects.forEach(element => {
+            const menu=document.createElement('div');
+menu.classList.add('menu');
+const box=document.createElement('div');
+box.classList.add('box');
+const img = document.createElement('img');
+img.src=  `http://localhost:3000/${element.projectImage}`;
+const header=document.createElement('h4');
+header.textContent=element.projectName;
+box.appendChild(img);
+box.appendChild(header);
+
+// box.appendChild(description);
+menu.appendChild(box);
+const show=document.createElement('div');
+show.classList.add('show');
+
+
+const myButton = document.createElement("button");
+const myLink = document.createElement("a");
+myLink.innerHTML = "Show Project";
+myLink.href = `project.html?id=${element.id}`;
+myButton.appendChild(myLink);
+show.appendChild(myButton);
+menu.appendChild(show);
+
+
+const far =document.createElement('div');
+far.classList.add('add');
+far.innerHTML=`
+
+<span id="btn-edit" style="border-radius:6px ; width:80px;text-align:center; color:#FFF;padding:6px 10px; background-color:#0F1729;cursor: pointer; margin-top:10px 0; "  onclick="deleteProject(${element.id})"> delete</span>
+<a href="updateProject.html?id=${element.id}" style="border-radius:6px ; width:80px;text-align:center; color:#FFF;padding:6px 10px; background-color:#0F1729; margin-top:10px 0; cursor: pointer; ">Edit</a>
+
+`
+menu.appendChild(far);
+menu_container.appendChild(menu);
+
+
+        });
+
+})
+}
+allopject();
+
+function getQueryStringParams(query) {
+    return query
+        ? (/^[?#]/.test(query) ? query.slice(1) : query)
+            .split('&')
+            .reduce((params, param) => {
+                    let [key, value] = param.split('=');
+                    params[key] = value ? decodeURIComponent(value.replace(/\+/g, ' ')) : '';
+                    return params;
+                }, {}
+            )
+        : {}
+}
+
+/*=====================================================================*/
+function deleteProject(id)
+{
+
+
+    const accesstoken= localStorage.getItem('access_token'); 
+    fetch(`http://localhost:3000/api/admin/Project/deleteProject/${id}`,{
+        method:"DELETE",
+    headers:{
+        'Authorization':`Bearer ${accesstoken}`,
+    },
+    }).then(response =>{
+    if(response.status === 500)
+    {
+    const refreshToken=localStorage.getItem("refresh_token");
+    fetch('http://localhost:3000/api/auth/refreshToken',{
+    method:"POST",
+    headers:{
+    "Content-Type":"application/json",
+    },
+    body:JSON.stringify({
+    token:refreshToken
+    }),
+    }).then(refreshResponse =>{
+    if(refreshResponse.ok)
+    {
+    return refreshResponse.json();
+
+
+    }else{
+    console.erorr('refresh token is invalid or expired.');
+    }
+    }).then(data=>{
+    localStorage.setItem("access_token",data.accessToken);
+    const newAccessToken = localStorage.getItem("access_token");
+    fetch(`http://localhost:3000/api/admin/Project/deleteProject/${id}`,{
+        method:"DELETE",
+                headers:{
+                    Authorization:`Bearer ${newAccessToken}`,
+                },
+        }).then(newResponse=>{
+            return newResponse.json();
+        }).then(newData=>{
+            console.log('Data Fetsh Successfully:',newData);
+        
+        })
+        
+    })
+
+    }else{
+    return response.json();
+    }
+    }).then(data =>{
+    console.log("Data fetched SuccessFully:", data);
+    })
+    location.reload();
+}
+   
+   /*=================================================================*/
+   const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+
+    searchInput.addEventListener('input', function() {
+      const searchTerm = searchInput.value.toLowerCase();
+
+      fetch('http://localhost:3000/api/getData/Project?page=1&size=22')
+        .then(response => response.json())
+        .then(data => {
+          const matchingItems = data.projects.filter(item => item.projectName.toLowerCase().includes(searchTerm));
+          displayResults(matchingItems);
+        })
+        .catch(error => console.error(error));
+    });
+
+
+
+
+    function displayResults(items) {
+      searchResults.innerHTML = '';
+
+      if (items.length === 0) {
+        searchResults.textContent = 'No results found.';
+        return;
+      }
+      const tbody = document.querySelector('.menu-container');
+      tbody.style.display='none';
+      const list = document.createElement('div');
+    
+      const accesstoken= localStorage.getItem('access_token'); 
+      items.forEach((element,i)=>{
+
+        const menu=document.createElement('div');
+menu.classList.add('menu')
+        
+        
+        fetch('http://localhost:3000/api/getData/getCountProject',{
+            headers:{
+                'Authorization':`Bearer ${accesstoken}`,
+                "Content-Type":"application/json",
+            },
+        }).then(res=>{
+            return res.json()
+        }).then(dat =>{
+            console.log(dat);
+            const box=document.createElement('div');
+box.classList.add('box');
+const img = document.createElement('img');
+img.src=  `http://localhost:3000/${element.projectImage}`;
+
+// const description= document.createElement('p');
+// description.textContent=element.description;
+box.appendChild(img);
+
+// box.appendChild(description);
+ const header=document.createElement('h4');
+header.textContent=element.projectName;
+box.appendChild(header);
+menu.appendChild(box);
+
+const show=document.createElement('div');
+show.classList.add('show');
+
+const myButton = document.createElement("button");
+const myLink = document.createElement("a");
+myLink.innerHTML = "Show STL";
+myLink.href =`project.html?id=${element.id}` ;
+myButton.appendChild(myLink);
+show.appendChild(myButton);
+menu.appendChild(show);
+
+
+// feat.appendChild(img);
+// feat.appendChild(header);
+// feat.appendChild(description);
+
+const far =document.createElement('div');
+far.classList.add('add');
+far.innerHTML=`
+
+<span id="btn-edit" style="border-radius:6px ; width:80px;text-align:center; color:#FFF;padding:6px 10px; background-color:#0F1729;cursor: pointer; margin-top:10px 0; "  onclick="deleteData(${element.id})"> delete</span>
+<a href="updateProject.html?id=${element.id}" style="border-radius:6px ; width:80px;text-align:center; color:#FFF;padding:6px 10px; background-color:#0F1729; margin-top:10px 0; cursor: pointer; ">Edit</a>
+
+`
+menu.appendChild(far);
+
+        })
+       
+
+        
+        list.appendChild(menu);
+        
+        
+        })
+        
+      
+        
+      searchResults.appendChild(list);
+    }
+   /*=================================================================*/
+   
+   </script>
+   <script src="Js/allproject.js"></script>
+</body>
+</html>

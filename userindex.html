@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  
+  <title>Engineering Encyclopedia</title>
+  <meta name="title" content="">
+  <meta name="description" content="">
+
+  
+  <link rel="shortcut icon" href="./assets/images/PicsArt_04-27-02.00.5.png" >
+
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./csshoza/index.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Work+Sans:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./image/hero-banner.png">
+  <link rel="preload" as="image" href="./image/hero-bg.jpg">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="header-top">
+      <div class="container">
+
+        <a href="#" class="logo">
+          <img src="./image/logo.png" width="138" height="28" alt="booken home">
+        </a>
+
+   
+
+        <div class="header-action">
+
+          <!-- <a href="index.html"><button class="header-action-btn" aria-label="cart" title="message">
+            <span class="span">0</span></a> -->
+
+            <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+          </button>
+          
+          <button class="header-action-btn move" aria-label="user" title="profile">
+          <a href="profil.html" class="ter"> <ion-icon name="person-outline" aria-hidden="true"></ion-icon></a> 
+          </button>  
+
+         
+        
+
+
+          <button class="nav-open-btn" aria-label="open menu" title="Open Menu" data-nav-toggler>
+            <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+          </button>
+
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header-bottom" data-navbar>
+      <div class="container">
+
+        <nav class="navbar">
+
+          <button class="nav-close-btn" data-nav-toggler aria-label="clsoe menu" title="Clsoe Menu">
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+
+          <div class="navbar-top">
+            <input type="search" name="search" placeholder="Search our store" class="input-field">
+
+            <button class="search-btn" aria-label="Search">
+              <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+            </button>
+          </div>
+
+          <ul class="navbar-list">
+
+            <li id="hom">
+              <a href="#index" class="navbar-link">Home</a>
+            </li> 
+
+            
+            <li>
+              <a href="#Services" class="navbar-link">Services</a>
+            </li> 
+            
+            <li>
+             <a href="#STL" class="navbar-link">STL</a>
+            </li>
+
+            <li>
+              <a href="#Projects" class="navbar-link">Projects</a>
+            </li>
+            
+            <li>
+              <a href="#courses" class="navbar-link">courses</a>
+            </li>
+            
+            <li>
+              <a href="#Contact" class="navbar-link">Contact</a>
+            </li>
+
+            <li>
+              <a href="#About-Us" class="navbar-link">About Us</a>
+            </li>
+            
+          
+            
+            <li>
+              <span class="navbar-link" onclick="logout()">logout</span>
+            </li> 
+          </ul>
+           
+         
+
+       <section class="nad">
+        <div class="profile-card">
+          <img src="./image/PicsArt_04-27-02.00.5.png" width="48" height="48" alt="Steven" class="profile-banner">
+
+          <div>
+            <p class="card-title">Hello Engineering-Encyclopedia !</p>
+
+            <p class="card-subtitle">
+              You have 3 new messages
+            </p>
+          </div>
+        </div>
+
+        <ul class="link-list">
+
+          <li>
+            <a href="./profil.html" class="navbar-bottom-link hover-1">Profile</a>
+          </li>
+
+          <li>
+            <a href="./Favorites.html" class="navbar-bottom-link hover-1">My Favorites</a>
+          </li>
+
+          <li>
+            <a href="account.html" class="navbar-bottom-link hover-1">Account Setting</a>
+          </li>
+
+          <li>
+            <a href="./login.html" class="navbar-bottom-link hover-1">Sign Out</a>
+          </li>
+
+        </ul>
+       </section>
+  
+
+        </nav>
+
+
+
+      </div>
+    </div>
+
+    <div class="overlay" data-overlay data-nav-toggler></div>
+  </header>
+
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section id="home" class="section hero has-bg-image" aria-label="home"
+        style="background-image: url('./image/back1.jpg')">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h1 class="h1 hero-title has-after">
+              Discover Your <br>
+               Third Geometric Dimension
+            </h1>
+
+            <p class="hero-text">
+             The Engineering Encyclopedia provides you with a 3D engineering World that accompanies you 
+             from the learning stage to the professional disgan stage...
+            </p>
+
+          </div>
+
+          <figure class="hero-banner">
+            <img src="./image/logo.png" width="500" height="600" class="w-100">
+          </figure>
+
+        </div>
+      </section>
+
+  <!-- 
+        - #services
+      -->
+
+      <section id="Services"  class="section featured" aria-label="featured collection">
+        <div class="container">
+
+          <h2 class="h2 section-title">what we offer</h2>
+
+          <p class="section-text">
+            engineering Encyclopedia team works to provide educational and architectural engineers,as it designs 3D models
+            ,and holds many engineering courses and educational seminars, and we provide engineers with the opportunity to
+             train and work on our sites and achieve profits.  
+          </p>
+
+          <div class="grid-list1">
+
+            
+              <!-- <div class="product-card">
+
+               
+
+                <div class="card-banner img-holder" style="--width: 384; --height: 480;">
+                  <img src="image/ser1.jpg" width="384" height="480" loading="lazy" 
+                    class="img-cover">
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="card-title h3">
+                    Courses
+                  </h3>
+
+                  <p class="card-price" >The engineering encyclopedia seeks to train engineers 
+                    to work on the most important programs 
+                    required for the labor market today</p>
+
+
+                </div>
+
+              </div>
+
+       
+        
+
+              <div class="product-card">
+
+               
+
+                <div class="card-banner img-holder" style="--width: 384; --height: 480;">
+                  <img src="image/ser1.jpg" width="384" height="480" loading="lazy" 
+                    class="img-cover">
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="card-title h3">
+                    Courses
+                  </h3>
+
+                  <p class="card-price" >The engineering encyclopedia seeks to train engineers 
+                    to work on the most important programs 
+                    required for the labor market today</p>
+
+
+                </div>
+
+              </div>
+
+
+
+              <div class="product-card">
+
+               
+
+                <div class="card-banner img-holder" style="--width: 384; --height: 480;">
+                  <img src="image/ser1.jpg" width="384" height="480" loading="lazy" 
+                    class="img-cover">
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="card-title h3">
+                    Courses
+                  </h3>
+
+                  <p class="card-price" >The engineering encyclopedia seeks to train engineers 
+                    to work on the most important programs 
+                    required for the labor market today</p>
+
+
+                </div>
+
+              </div> -->
+
+
+
+              
+          </div>
+
+        </div>
+      </section>
+  
+
+
+        <!-- 
+        - #rate
+      -->
+
+    
+
+   <!-- 
+    - #stl  
+  -->
+
+  <section  class="section explore" id="STL">
+    <div class="container">
+
+      <p class="section-subtitle1">3D Disgn</p>
+
+      <div class="title-wrapper">
+        <h2 class="h2 section-title">STL</h2>
+
+        <a href="./indexStl.html" class="btn-link">
+          <span>Explore All</span>
+
+          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+        </a>
+      </div>
+
+      <ul class="grid-list">
+
+        <li>
+          <div class="card explore-card">
+
+            <figure class="card-bannere">
+              <a href="#">
+                <img src="image/stl11.png" width="600" height="600" loading="lazy"
+                  alt="Walking On Air" class="img-cover1">
+              </a>
+            </figure>
+
+            <h3 class="h3 card-title">
+              <a href="#">ironMan</a>
+            </h3>
+
+            <span class="card-author">
+              slajd alskjd aslkjd aslkdjas dlkasjd aslkdjasd lkasjd asdkjlasd askljd asldkjas dlkasjd
+            </span>
+
+            <div class="wrapper">
+              <data class="wrapper-item" value="1.5">chris tyker</data>
+
+              
+            </div>
+
+           
+
+          </div>
+        </li>
+
+        <li>
+          <div class="card explore-card">
+
+            <figure class="card-bannere">
+              <a href="#">
+                <img src="image/stl13.jpg" width="600" height="600" loading="lazy" alt="Domain Names"
+                  class="img-cover1">
+              </a>
+            </figure>
+
+            <h3 class="h3 card-title">
+              <a href="#">superman</a>
+            </h3>
+
+            <span class="card-author">
+             slajd alskjd aslkjd aslkdjas dlkasjd aslkdjasd lkasjd asdkjlasd askljd asldkjas dlkasjd
+            </span>
+
+            <div class="wrapper">
+              <data class="wrapper-item" value="2.7">jaky shan</data>
+
+             
+            </div>
+
+         
+
+          </div>
+        </li>
+
+        <li>
+          <div class="card explore-card">
+
+            <figure class="card-bannere">
+              <a href="#">
+                <img src="image/stl14.jpg" width="600" height="600" loading="lazy" alt="Trading Cards"
+                  class="img-cover1">
+              </a>
+            </figure>
+
+            <h3 class="h3 card-title">
+              <a href="#">superman</a>
+            </h3>
+
+            <span class="card-author">
+              slajd alskjd aslkjd aslkdjas dlkasjd aslkdjasd lkasjd asdkjlasd askljd asldkjas dlkasjd
+
+            </span>
+
+            <div class="wrapper">
+              <data class="wrapper-item" value="2.3">jaky shan</data>
+
+          
+            </div>
+
+           
+
+          </div>
+        </li>
+
+        <li>
+          <div class="card explore-card">
+
+            <figure class="card-bannere">
+              <a href="#">
+                <img src="image/stl15.jpg" width="600" height="600" loading="lazy"
+                  alt="Industrial Revolution" class="img-cover1">
+              </a>
+            </figure>
+
+            <h3 class="h3 card-title">
+              <a href="#">hand</a>
+            </h3>
+
+            <span class="card-author">
+              slajd alskjd aslkjd aslkdjas dlkasjd aslkdjasd lkasjd asdkjlasd askljd asldkjas dlkasjd
+
+            </span>
+
+            <div class="wrapper">
+              <data class="wrapper-item" value="1.8">bernarashdo</data>
+
+
+            </div>
+
+          
+
+          </div>
+        </li>
+
+        
+
+        <li>
+          <div class="card explore-card">
+
+            <figure class="card-bannere">
+              <a href="#">
+                <img src="image/stl16.jpg" width="600" height="600" loading="lazy" alt="Sports"
+                  class="img-cover1">
+              </a>
+            </figure>
+
+            <h3 class="h3 card-title">
+              <a href="#">tyler</a>
+            </h3>
+
+            <span class="card-author">
+              slajd alskjd aslkjd aslkdjas dlkasjd aslkdjasd lkasjd asdkjlasd askljd asldkjas dlkasjd
+
+            </span>
+
+            <div class="wrapper">
+              <data class="wrapper-item" value="1.7">marktwen</data>
+
+           
+            </div>
+
+          
+
+          </div>
+        </li>
+
+        <li>
+          <div class="card explore-card">
+
+            <figure class="card-bannere">
+              <a href="#">
+                <img src="image/stl18.jpeg" width="600" height="600" loading="lazy"
+                  alt="Cartoon Heroes" class="img-cover1">
+              </a>
+            </figure>
+
+            <h3 class="h3 card-title">
+              <a href="#"> Heroes</a>
+            </h3>
+
+            <span class="card-author">
+              slajd alskjd aslkjd aslkdjas dlkasjd aslkdjasd lkasjd asdkjlasd askljd asldkjas dlkasjd
+
+            </span>
+
+            <div class="wrapper">
+              <data class="wrapper-item" value="3.2">hemethoth</data>
+            </div>
+
+            
+
+          </div>
+        </li>
+
+        <li>
+          <div class="card explore-card">
+
+            <figure class="card-bannere">
+              <a href="#">
+                <img src="image/stl17.jpeg" width="600" height="600" loading="lazy" alt="Gaming Chair"
+                  class="img-cover1">
+              </a>
+            </figure>
+
+            <h3 class="h3 card-title">
+              <a href="#"> Chair</a>
+            </h3>
+
+            <span class="card-author">
+              slajd alskjd aslkjd aslkdjas dlkasjd aslkdjasd lkasjd asdkjlasd askljd asldkjas dlkasjd
+
+            </span>
+
+            <div class="wrapper">
+              <data class="wrapper-item" value="0.69">hamed</data>
+
+           
+            </div>
+
+           
+
+          </div>
+        </li>
+
+        <li>
+          <div class="card explore-card">
+
+            <figure class="card-bannere">
+              <a href="#">
+                <img src="./image/auction-9.jpg" width="600" height="600" loading="lazy" alt="Utility"
+                  class="img-cover1">
+              </a>
+            </figure>
+
+            <h3 class="h3 card-title">
+              <a href="#">Utility</a>
+            </h3>
+
+            <span class="card-author">
+              slajd alskjd aslkjd aslkdjas dlkasjd aslkdjasd lkasjd asdkjlasd askljd asldkjas dlkasjd
+
+            </span>
+
+            <div class="wrapper">
+              <data class="wrapper-item" value="1.7">Alwi</data>
+
+          
+            </div>
+
+           
+          </div>
+        </li>
+
+      
+       
+
+      </ul>
+
+    </div>
+  </section>
+
+
+   <!-- 
+        - #project
+      -->
+
+      <section class="section feature" aria-label="feature" id="Projects">
+        <div class="container">
+
+          <h2 class="headline headline-2 section1-title">
+            <span class="span">Projects</span>
+          </h2>
+
+          <p class="section1-text">
+           Design and industry best projects with best materials
+          </p>
+
+          <ul class="feature-list">
+
+            <li>
+              <div class="card2 feature-card">
+
+                <figure class="card-banner img-holder2" style="--width: 1602; --height: 903;">
+                  <img src="image/stl7.jpg" width="1602" height="903" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover2">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper2">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">Robot</a>
+
+                    </div>
+
+  
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="#" class="card-title hover-2">
+                     this robot is a kit of several pieces that can move and installing
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper2">
+
+                    <div class="profile-card">
+                      
+                      <div>
+                        <p class="card-title">Joseph</p>
+
+                      
+                      </div>
+                    </div>
+
+                   
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+            <li>
+              <div class="card2 feature-card">
+
+                <figure class="card-banner img-holder2" style="--width: 1602; --height: 903;">
+                  <img src="image/stl6.jpg" width="100%" height="100%" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover2">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper2">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">lion</a>
+
+                    </div>
+
+  
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="#" class="card-title hover-2">
+                     this lion is a kit of several pieces that can move and installing
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper2">
+
+                    <div class="profile-card">
+                      
+                      <div>
+                        <p class="card-title">john</p>
+
+                      
+                      </div>
+                    </div>
+
+                   
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card2 feature-card">
+
+                <figure class="card-banner img-holder2" style="--width: 1602; --height: 903;">
+                  <img src="image/stl1.jpeg" width="100%" height="100%" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover2">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper2">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">Soldiers</a>
+
+                    </div>
+
+  
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="#" class="card-title hover-2">
+                     this Soldiers is a kit of several pieces that can move and installing
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper2">
+
+                    <div class="profile-card">
+                      
+                      <div>
+                        <p class="card-title">Jack</p>
+
+                      
+                      </div>
+                    </div>
+
+                   
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card2 feature-card">
+
+                <figure class="card-banner img-holder2" style="--width: 1602; --height: 903;">
+                  <img src="image/stl1.jpg" width="100%" height="100%" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover2">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper2">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">fighter</a>
+
+                    </div>
+
+  
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="#" class="card-title hover-2">
+                     this fighter is a kit of several pieces that can move and installing
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper2">
+
+                    <div class="profile-card">
+                      
+                      <div>
+                        <p class="card-title">Alex</p>
+
+                      
+                      </div>
+                    </div>
+
+                   
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card2 feature-card">
+
+                <figure class="card-banner img-holder2" style="--width: 1602; --height: 903;">
+                  <img src="image/stl3.jpeg" width="100%" height="100%" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover2">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper2">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">Thur</a>
+
+                    </div>
+
+  
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="#" class="card-title hover-2">
+                     this Thur is a kit of several pieces that can move and installing
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper2">
+
+                    <div class="profile-card">
+                      
+                      <div>
+                        <p class="card-title">Richard</p>
+
+                      
+                      </div>
+                    </div>
+
+                   
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <a href="./indexproject.html" class="btn btn-secondary">
+            <span class="span">Show More </span>
+
+            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+          </a>
+
+        </div>
+
+        <img src="./assets/images/shadow-3.svg" width="500" height="1500" loading="lazy" alt="" class="feature-bg">
+
+      </section>
+
+      <!-- 
+        - #course
+      -->
+
+   
+      <section class="section cours" id="courses">
+        <div class="container">
+
+          <p class="section-subtitle3">The most</p>
+
+          <div class="title-wrapper3">
+            <h2 class="h2 section-title">Courses</h2>
+
+            <a href="./indexCourses.html" class="btn-link3">
+              <span>View All</span>
+
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+          </div>
+
+          <ul class="grid-list3">
+
+            <li>
+              <div class="card feature-card3">
+
+                <figure class="card-banner3 img-holder3" style="--width: 1602; --height: 903;">
+                  <img src="image/atocad.png" width="1602" height="80%" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover3">
+                </figure>
+
+                <div class="card-avatar3">
+
+                  <div class="card-wrapper2">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">Atocade</a>
+
+                     
+                    </div>
+
+                  
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="https://youtu.be/EPX22wSvwNo" class="card-title hover-2">
+                     this course is used for design and suitable for engineerls
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper2">
+
+                    <div class="profile-card">
+                    
+                      <div>
+                        <p class="card-title">Mike</p>
+
+                    
+                      </div>
+                    </div>
+
+                
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card feature-card3">
+
+                <figure class="card-banner3 img-holder3" style="--width: 1602; --height: 903;">
+                  <img src="image/solidword.jfif" width="1602" height="80%" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover3">
+                </figure>
+
+                <div class="card-avatar3">
+
+                  <div class="card-wrapper2">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">Solidword</a>
+
+                     
+                    </div>
+
+                  
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="https://youtu.be/yY2Rmv4HbTU" class="card-title hover-2">
+                     this course is used for design and suitable for engineerls
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper2">
+
+                    <div class="profile-card">
+                    
+                      <div>
+                        <p class="card-title">Jessie</p>
+
+                    
+                      </div>
+                    </div>
+
+                
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card feature-card3">
+
+                <figure class="card-banner3 img-holder3" style="--width: 1602; --height: 903;">
+                  <img src="image/catia.png" width="1602" height="80%" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover3">
+                </figure>
+
+                <div class="card-avatar3">
+
+                  <div class="card-wrapper2">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">Catia</a>
+
+                     
+                    </div>
+
+                  
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="https://youtu.be/1Y138d8IXhc" class="card-title hover-2">
+                     this course is used for design and suitable for engineerls
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper2">
+
+                    <div class="profile-card">
+                    
+                      <div>
+                        <p class="card-title">Tyler</p>
+
+                    
+                      </div>
+                    </div>
+
+                
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card feature-card3">
+
+                <figure class="card-banner3 img-holder3" style="--width: 1602; --height: 903;">
+                  <img src="image/inventor.webp" width="1602" height="80%" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover3">
+                </figure>
+
+                <div class="card-avatar3">
+
+                  <div class="card-wrapper2">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">Inventor</a>
+
+                     
+                    </div>
+
+                  
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="https://youtu.be/YBmUwEoXfMU" class="card-title hover-2">
+                     this course is used for design and suitable for engineerls
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper2">
+
+                    <div class="profile-card">
+                    
+                      <div>
+                        <p class="card-title">Sameh</p>
+
+                    
+                      </div>
+                    </div>
+
+                
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card feature-card3">
+
+                <figure class="card-banner3 img-holder3" style="--width: 1602; --height: 903;">
+                  <img src="image/achad.png" width="1602" height="80%" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover3">
+                </figure>
+
+                <div class="card-avatar3">
+
+                  <div class="card-wrapper2">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">Archicade</a>
+
+                     
+                    </div>
+
+                  
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="https://youtu.be/eKPh6r60kvE" class="card-title hover-2">
+                     this course is used for design and suitable for engineerls
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper2">
+
+                    <div class="profile-card">
+                    
+                      <div>
+                        <p class="card-title">Alexander</p>
+
+                    
+                      </div>
+                    </div>
+
+                
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+         
+
+        </div>
+
+        <img src="./assets/images/shadow-3.svg" width="500" height="1500" loading="lazy" alt="" class="feature-bg">
+
+      </section>
+
+<!-- about -->
+<section class="secAbout" id="About-Us" style="background-image: url('./image/back.jpg')">
+
+
+  <div class="title-wrapper4">
+    <h2 class="h2 section-title">About Ua</h2>
+  </div>
+
+
+  <div class="container">
+    <div class="box">
+    <div class="content">
+        <h3>Strategic Goals</h3>
+        <div class="icon">
+            <div class="text">
+                
+                <p> Creating a work platform that includes the Engineering Encyclopedia Center and the website 
+                     ,Meeting market needs for 3D printing in terms of design for medical issues
+                 ,Production of 3D printers Programming to improve the working systems of 3D printers at the programming level and at the hardware level (for example, maintenance). 
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="box" style="--clr:rgb(213, 195, 3);">
+        <div class="content">
+            <h3>Sub Objectives</h3>
+        <div class="icon">
+        <div class="text">
+           
+          <p>
+           Spreading the culture of 3D printing to help create a market for 3D printing.
+           ,Assisting in the production of projects through 3D printing, where these projects respond to specific problems in the world and find solutions to them.
+          </p> 
+        </div>
+    </div>
+  </div>
+    </div>
+  <div class="box" style="--clr:rgb(213, 195, 3);">
+  <div class="content">
+    <h3>Procdural Objectives</h3>
+    <div class="icon">
+  
+    <div class="text">
+        
+      <p>
+         Securing a stable income for the engineers participating in the work, and relying on the profit through the Internet in the first stage
+         ,Finding a new source of income for all the encyclopedia workers in Syria and abroad.
+      </p>
+    </div>
+  </div>
+  </di>
+  </div>
+  </section>
+
+
+
+  <!-- 
+    - #Contact
+  -->
+
+  <footer id="Contact">
+    <div class="container">
+
+      <div class="card footer">
+
+        <div class="section5 footer-top">
+
+          <div class="footer-brand">
+
+            <a href="#" class="logo">
+              <img src="./image/logo.png" width="119" height="37" loading="lazy" alt="Wren logo">
+            </a>
+
+            <p class="footer-text">
+              When an unknown prnoto sans took a galley and scrambled it to make specimen book not only five When an
+              unknown prnoto sans took a galley and scrambled it to five centurie.
+            </p>
+
+            <p class="footer-list-title">Address</p>
+
+            <address class="footer-text address">
+              123 Main Street <br>
+              New York, NY 10001
+            </address>
+
+          </div>
+
+          <div class="footer-list">
+
+            <p class="footer-list-title">Categories</p>
+
+            <ul>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Action</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Business</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Adventure</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Canada</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">America</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Curiosity</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Animal</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Dental</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Biology</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Design</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Breakfast</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Dessert</a>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="footer-list">
+
+            <p class="footer-list-title">Newsletter</p>
+
+            <p class="footer-text">
+              Sign up to be first to receive the latest stories inspiring us, case studies, and industry news.
+            </p>
+
+            <div class="input-wrapper5">
+              <input type="text" name="name" placeholder="Your name" required class="input-field" autocomplete="off">
+
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+            </div>
+
+            <div class="input-wrapper5">
+              <input type="email" name="email_address" placeholder="Emaill address" required class="input-field"
+                autocomplete="off">
+
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+            </div>
+
+            <a href="#" class="btn btn-primary">
+              <span class="span">Subscribe</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+          <p class="copyright">
+            &copy; Developed by <a href="#" class="copyright-link">H-87</a>
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+
+                <span class="span">Twitter</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+
+                <span class="span">LinkedIn</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+
+                <span class="span">Instagram</span>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+      
+    </div>
+  </footer>
+  
+  
+  
+  
+  
+  <!-- 
+    - custom js link
+  -->
+  <script src="Js/userindex.js"></script>
+  <script src="Js/profil.js"></script>
+  <script>
+    const hom=document.getElementById('hom');
+    console.log(hom)
+    const role= localStorage.getItem('role'); 
+    if(role==='student'){
+hom.style.display='none'
+    }
+  </script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  
+</body>
+</html>

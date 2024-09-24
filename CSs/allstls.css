@@ -1,0 +1,269 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: "Poppins",sans-serif;
+}
+body{
+    
+    background-color:  hsl(240, 100%, 6%) ;
+    height: 100vh;
+}
+.Wapper{
+    width: 100%;
+margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#searsh-contaier{
+    width: 100%;
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#searsh-contaier input{
+    width: 50%;
+    background-color: transparent;
+    border-bottom: 2px solid aqua;
+    padding: 1em 0.3em;
+}
+#searsh-contaier input:focus{
+    border-bottom: #22169e;
+
+}
+#searsh-contaier button{
+    
+    padding: 1em 2em;
+    margin-left: 1em;
+    background-color: aqua;
+    color: rgb(14, 21, 28);
+    border-radius: 5px;
+    margin-top: 0.5em;
+
+}
+#butons{
+ 
+    margin-top: 3%;
+    max-width: 100%;
+    gap: 60px;
+
+}
+#butons button{
+    background-color: transparent;
+    border: 2px solid aqua;
+    padding: 1em 2.2em;
+    border-radius: 5px;
+    color: aqua;
+    width: 130px;
+    margin-left: 142px;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+#butons button:hover{
+    background-color: aqua;
+    color: rgb(14, 21, 28);
+}
+.project{
+    padding: 80px 40px;
+    width: 100%;
+    height: auto;
+}
+.project .list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(250px,1fr));
+    gap: 30px;
+    margin-bottom: 48px;
+}
+
+.project .list .card{
+    position: relative;
+    padding: 8px;
+    background-color:hsla(222, 44%, 13%, 1);
+    border: 1px solid hsla(216, 33%, 20%, 1);
+    border-radius: 8px;
+    width: 250px;
+}
+.project .list .card .img-cover1{
+
+    width: 95%;
+    margin: 5px auto;
+    height: 215px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding-bottom: 5px;
+    position: relative;
+    margin-left: 4px;
+    margin-bottom: 4px;
+    border-radius: 5px;
+   
+   
+
+}
+.project .list .card .card-last {
+    border-top: 3px solid hsla(216, 33%, 20%, 1);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    font-size: 10px;
+    margin-block: 20px;
+    margin-block-start: 24px;
+    padding-top: 10px;
+}
+.project .list .card .card-last h2{
+    display: flex;
+     gap: 3px;
+    align-items: center;
+    color: hsla(217, 17%, 48%, 1);
+    margin-left: 50%;
+    transform: translateX(-50%);
+    
+
+}  
+.project .list .card h4{
+    font-size: 1.4rem;
+    color:hsla(216, 33%, 68%, 1);
+    margin-bottom: 7px;
+}
+
+.profile-card{
+display: flex;
+align-items: center;
+gap: 10px; 
+}
+ 
+             
+.profile-card  .profile-banner{
+    border-radius: 50%;
+}
+.profile-card .prof p{
+    font-weight: 700;
+    color: hsla(217, 17%, 48%, 1);
+}
+
+
+
+.project .list  .card .btn{
+    
+  
+        background: rgb(42, 144, 144);
+        outline: none;
+        border: none;
+        font-weight: 500;
+        cursor: pointer;
+        color: #d8d2d2;
+        font-size: 20px;
+        width: 232px;
+        height: 23.400px;
+        padding: 20px 10px;
+        margin-top: 15px;
+        border: 1px solid hsla(216, 33%, 20%, 1); 
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+
+
+    }
+    .project .list  .card .btn:hover{  
+
+        background: none;
+        border:3px solid aqua;
+        color:aqua; 
+    }
+ #search{
+    width: 100%;
+    color: #000;
+    padding: 8px;
+    border-radius: 6px;
+    background: #7d91b0
+ }
+
+    #searchResults{
+        margin-left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+    #searchResults .card{
+        padding: 10px;
+        background-color: var(--bg-oxford-blue);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        border: 1px solid var(--border-prussian-blue);
+        outline: 1.5px solid var(--border-prussian-blue);
+        border-radius: 8px;
+        width: 100%;
+        margin-top: 20px;
+    }
+    #searchResults .card img{
+        width: 300px;
+        height: 188px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-radius: 6px;
+    }
+    #searchResults .card .card-last h2 {
+        text-align: center;
+        width: 100%;
+        padding-top: 10px;
+        color: #7D91B0;
+    }
+    #searchResults .card .btn{
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 20px;
+    }
+    #searchResults .card .btn a {
+        background-color: #0F1729;
+        padding: 6px 10px;
+        width: 100%;
+        color: #FFF;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all .3s ease;
+    }
+   
+ 
+  
+
+  
+
+
+
+@media (max-width: 445px){
+    #butons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3%;
+        flex-wrap: wrap;
+        max-width: 100%;
+        gap: 20px;
+    
+    }
+    #butons button{
+        background-color: transparent;
+        border: 2px solid aqua;
+        padding: 1em 2.2em;
+        border-radius: 5px;
+        color: aqua;
+        width: 100px;
+        margin-left: 3em;
+        margin-right: 1em;
+        cursor: pointer;
+    }
+}
+
+.btn{
+    margin-bottom: 15px;
+}
+.btn a{
+    color: #FFF;
+    text-decoration: none;
+}

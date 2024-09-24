@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    body{
+        height: 700px;
+        background-color: hsl(240, 100%, 6%) ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .contentBx{
+        height: 700px;
+        background:#131B30;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 0px;
+        position: relative;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+    section .contentBx .fromBx{
+        width: 50%;
+
+    }
+    section .contentBx .fromBx  h1{
+        color:aqua;
+        font-weight: 600;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        border-bottom: 4px solid hsl(240, 100%, 6%) ;
+        display: inline-block;
+        text-align: center;
+        line-height: 1.5em;
+        margin-bottom: 20px;
+       
+        }
+        section .contentBx .fromBx   h2{
+            color: white;
+            font-size: 40px;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 1em;
+            margin-bottom: 20px;
+            }
+
+            section .contentBx .fromBx .error-text {
+                background: rgb(233, 148, 148);
+                width: 100%;
+                margin: 10px auto;
+                padding: 10px;
+                border-radius: 25px;
+                font-size: 12px;
+                color: rgb(110, 13, 0);
+                border: 1px solid rgb(177, 72, 58);
+                text-align: center;
+            }
+            section .contentBx .fromBx .inputBx{
+               margin-bottom: 20px;
+            }
+      
+            section .contentBx .fromBx .inputBx input{
+                width: 100%;
+                padding: 10px 20px;
+                outline: none;
+                font-weight: 400;
+                border: 1px solid aqua;
+                font-size: 16px;
+                letter-spacing: 1px;
+                color: #8f8f8f;
+                background: transparent;
+                border-radius: 50px;
+            }
+            section .contentBx .fromBx .inputBx input::placeholder{
+                color: #8f8f8f;
+            }
+            section .contentBx .fromBx .inputBx select{
+                width: 100%;
+                padding: 10px 20px;
+                outline: none;
+                font-weight: 400;
+                border: 1px solid aqua;
+                font-size: 16px;
+                letter-spacing: 1px;
+                color: #8f8f8f;
+                background: transparent;
+                border-radius: 50px;
+            }
+            section .contentBx .fromBx .inputBx select option{
+                width: 100%;
+                padding: 10px 20px;
+                font-weight: 400;
+                font-size: 16px;
+                letter-spacing: 1px;
+                color: #000226;
+            
+            
+            }
+            section .contentBx .fromBx button{
+                background:  rgb(42, 144, 144);
+                outline: none;
+                border: none;
+                font-weight: 500;
+                cursor: pointer;
+                color: #2e2e2e;
+                font-size: 20px;
+                width: 395.925px;
+                height: 18.400px;
+                padding: 20px 10px;
+                border: 1px solid #fff;
+                border-radius: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+
+            }
+            section .contentBx .fromBx button:hover{
+                background: none;
+                border:3px solid aqua;
+                color: #FFF;
+            }
+            section .contentBx .fromBx h3 {
+                text-align: center;
+                margin: 35px 0 10px;
+                font-weight: 500; 
+                color:#FFF ;
+        
+            }
+                section .contentBx .fromBx .sci{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }          
+                section .contentBx .fromBx .sci li{
+                    list-style:none;
+                    width: 50px;
+                    height: 50px;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    margin: 0 7px;
+                    cursor: pointer;
+                }   
+
+                .back-top-btn.active {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: translateY(-10px);
+                }
+                
+                .back-top-btn {
+                    position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    width: 50px;
+                    height: 50px;
+                    background-color: var(--bg-prussian-blue);
+                    color: var(--white);
+                    display: grid;
+                    place-items: center;
+                    border-radius: var(--radius-circle);
+                    border: 3px solid var(--bg-carolina-blue);
+                    transition: var(--transition-1);
+                    visibility: hidden;
+                    opacity: 0;
+                    z-index: 4;
+                }
+                
+                @media (max-width:768px) {
+                    body{
+                        height: 121vh;
+                        background-color: hsl(240, 100%, 6%) ;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        
+                
+                    }
+                    section .imgBx{
+                        position: absolute;
+                        top: 0;
+                        left:0;
+                        width: 100%;
+                        height: 130%;
+                    }
+                    section .contentBx{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1;
+                        height: 850px;
+                    }
+                    section .contentBx .fromBx h3 {
+                        color: white;
+                        text-align: center;
+                        margin: 30px 0 10px;
+                        font-weight: 500;
+                    }
+                    section .contentBx .fromBx  h1{
+                        color:aqua;
+                        font-size: 20px;
+                        border-bottom: 4px solid hsl(240, 100%, 6%) ;
+                        padding-top: 60px;
+                    }
+                    section .contentBx .fromBx   h2{
+                        margin-top: 50px;
+                        color:white;
+                    }
+                    section .contentBx .fromBx{
+                        width: 100%;
+                        padding: 10px;
+                       
+
+                    }
+                
+                }  
+
+    
